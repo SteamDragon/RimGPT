@@ -1,4 +1,4 @@
-name: Release Mod
+name: Release Mod custom
 
 "on":
   push:
