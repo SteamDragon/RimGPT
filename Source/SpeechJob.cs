@@ -16,7 +16,7 @@ namespace RimGPT
 		public SpeechJob(Persona persona, Phrase[] phrases, Action<string> errorCallback, Action doneCallback)
 		{
 			this.persona = persona;
-			waitForAudio = true;
+			waitForAudio = false;
 			this.doneCallback = doneCallback;
 
 			Tools.SafeAsync(async () =>
@@ -30,8 +30,7 @@ namespace RimGPT
 					completed = true;
 					return;
 				}
-				if (RimGPTMod.Settings.azureSpeechKey != "" && RimGPTMod.Settings.azureSpeechRegion != "")
-					audioClip = await TTS.AudioClipFromAzure(persona, $"{TTS.APIURL}/v1", spokenText, errorCallback);
+				
 				completed = true;
 			});
 		}

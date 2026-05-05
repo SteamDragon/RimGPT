@@ -267,18 +267,6 @@ namespace RimGPT
 					text = result.Item1;
 					error = result.Item2;
 				}
-				if (text != null)
-				{
-					var audioClip = await AudioClipFromAzure(persona, $"{APIURL}/v1", text, e => error = e);
-					if (audioClip != null)
-					{
-						var source = GetAudioSource();
-						source.Stop();
-						source.clip = audioClip;
-						source.volume = RimGPTMod.Settings.speechVolume;
-						source.Play();
-					}
-				}
 				if (error != null)
 					LongEventHandler.ExecuteWhenFinished(() =>
 					{
