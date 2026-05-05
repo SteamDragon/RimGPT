@@ -110,7 +110,7 @@
 			<CopyOlder Include="..\Older\**" />
 			<CopyTextures Include="..\Textures\**" />
 			<CopyLicense Include="..\LICENSE" />
-			<CopyReadme Include="..\Readme.md" />
+			<CopyReadme Include="..\README.md" />
 		</ItemGroup>
 		<Copy SourceFiles="@(Copy16)" DestinationFolder="$(RIMWORLD_MOD_DIR)\$(ModFileName)\1.6\%(RecursiveDir)" />
 		<Copy SourceFiles="@(CopyAbout)" DestinationFolder="$(RIMWORLD_MOD_DIR)\$(ModFileName)\About\%(RecursiveDir)" />

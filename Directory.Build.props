@@ -1,7 +1,7 @@
 ﻿<Project>
 
 	<PropertyGroup>
-		<ModName>RimGPT Without azure</ModName>
+		<ModName>RimGPT Without azure :D</ModName>
 		<ModFileName>RimGPT</ModFileName>
 		<Repository>https://github.com/SteamDragon/RimGPT/</Repository>
 		<ModVersion>2.2.3.0</ModVersion>
